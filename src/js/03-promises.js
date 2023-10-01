@@ -18,7 +18,7 @@ form.addEventListener('submit', function (e) {
     })
       .catch(({ position, delay }) => {
         console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-      Notiflix.Notify.failure(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);;
 
       })
   }
