@@ -10,7 +10,7 @@ form.addEventListener('submit', function (e) {
   const amount = Number(form.querySelector('[name="amount"]').value);
 
   for (let i = 0; i < amount; i++) {
-    stepDelay = formDelay + step * i
+    let stepDelay = formDelay + step * i
     createPromise(i+1, stepDelay)
     .then(({ position, delay }) => {
       console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
