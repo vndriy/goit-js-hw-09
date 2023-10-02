@@ -9,6 +9,8 @@ const hours = document.querySelector('[data-hours]');
 const minutes = document.querySelector('[data-minutes]');
 const seconds = document.querySelector('[data-seconds]')
 
+let intervalId;
+
 start.disabled = true;
 
 const options = {
@@ -29,6 +31,7 @@ const options = {
 start.addEventListener('click', onStart)
 
 function onStart() {
+  
   start.disabled = true;
   input.disabled = true;
 
